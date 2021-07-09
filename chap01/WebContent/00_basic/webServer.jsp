@@ -12,7 +12,7 @@
 
 	<ul>
 		<li>127.0.0.1 : 자기 자신을 가리키는 IP주소</li>
-		<li>localhost : 공유기 까지 가지도 않고 그냥 자기 자신의 컴퓨터로 접속</li>
+		<li>localhost : 공유기까지 가지도 않고 그냥 자기 자신의 컴퓨터로 접속</li>
 	</ul>
 
 	<h3># Http URL의 구조</h3>
@@ -47,6 +47,13 @@
 	<ul>
 		<li>24시간 대기하고 있다가 사용자가 접속하면 사용자가 원하는 웹 페이지를 응답(response)해주는 프로그램</li>
 		<li>사용자가 어떤 웹 페이지를 원하는지는 사용자가 요청(request)하는 URL을 통해 구분한다</li>
+	</ul>
+	
+	<h3># Dynamic Web Project</h3>
+	
+	<ul>
+		<li>java, src/main/java, Java Resources: 자바 코드를 작성하는 폴더</li>
+		<li>webapp, WebContent: 웹 서버에 등록될 자원들을 보관하는 폴더, 기본적으로 웹 서버는 접속하는 사용자에게 이곳에 등록된 html, jsp등을 응답해준다</li>
 	</ul>
 
 </body>
