@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_링크</title>
+</head>
+<body>
+    <h3># 링크 (Link)</h3>
+
+    <p>
+        - a태그 <br>
+        - 자바스크립트 <br>
+    </p>
+
+    <h3># 외부 페이지로 링크 걸기</h3>
+    
+    <a href="http://naver.com">네이버로</a>
+    <a href="http://comic.naver.com">네이버 웹툰으로</a>
+    <a href="naver.com">네이버로?</a>
+
+    <h3># 내부 페이지로 링크 걸기</h3>
+
+    1. <a href="./01_HTML이란.html">HTML이란</a> <br>
+    2. <a href="02_제목과 문단.html">제목과 문단</a> <br>
+    
+    <hr>
+
+    <a href="./04_속성.html">이전으로</a>
+    <a href="#">다음으로</a>
+
+    <h3># 페이지의 특정 부분으로 링크 걸기</h3>
+
+    <p>
+        페이지 내부 원하는 요소의 ID속성을 이용하면 그 요소가 보이는 화면 으로 링크를 걸 수 있다
+    </p>
+
+    1. <a href="#chap01">챕터1로</a> <br>
+    2. <a href="#chap02">챕터2로</a> <br>
+    3. <a href="#chap03">챕터3로</a> <br>
+
+    <hr>
+    1. <a href="http://naver.com#themecast">네이버로</a>
+    <hr>
+
+    <h3># 자바스크립트로 링크 보내기</h3>
+
+    <p>
+        방탄소년단(BTS)이 <a href="">빌보드</a>에서 아시아 가수 최장 기록을 새로 썼다. 미국 빌보드는 21일(현지시간) 
+        방탄소년단이 지난달 21일 발매한 두 번째 영어 싱글 
+        <b onclick="b_link()">‘버터(Butter)’</b>가 메인 싱글 차트인 ‘핫 100’에서 4주 연속 1위에 올랐다고 밝혔다. 
+        지난해 8월 발매한 첫 영어 싱글 ‘다이너마이트(Dynamite)’로 통산 3주간 1위에 오른 자체 최고 기록을 경신함과 동시에 
+        1963년 아시아 가수 최초로 핫 100 정상에 오른 일본 가수 사가모토 규의 ‘스키야키(Sukiyaki)’가 세운 3주 연속 1위 기록도 
+        갈아치웠다. 가히 <i onmouseover="location.href='https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%ED%95%9C%EA%B8%80%EB%82%A0'">‘기록소년단’</i>다운 행보다. 
+    </p>
+
+    <script>
+        function b_link() {
+            url = 'http://google.com';
+
+            location.href = url;
+        }
+    </script>
+
+
+    <h1 id="chap01">Chapter 01.</h1>
+
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    
+    <hr>
+    <h1 id="chap02">Chapter 02.</h1>
+
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    
+    <hr>
+    <h1 id="chap03">Chapter 03.</h1>
+
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+    <p>Common sense is not so common.</p>
+
+</body>
+</html>
