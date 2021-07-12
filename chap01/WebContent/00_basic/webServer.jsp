@@ -53,7 +53,9 @@
 	
 	<ul>
 		<li>java, src/main/java, Java Resources: 자바 코드를 작성하는 폴더</li>
-		<li>webapp, WebContent: 웹 서버에 등록될 자원들을 보관하는 폴더, 기본적으로 웹 서버는 접속하는 사용자에게 이곳에 등록된 html, jsp등을 응답해준다</li>
+		<li>webapp, WebContent
+			- 웹 서버에 등록될 자원들을 보관하는 폴더
+			- 기본적으로 웹 서버는 접속하는 사용자에게 이곳에 등록된 .html, .jsp등을 응답해준다</li>
 	</ul>
 
 </body>
