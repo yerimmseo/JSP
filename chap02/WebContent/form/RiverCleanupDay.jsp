@@ -24,7 +24,7 @@
 	</ul>
 	
 	<!-- 
-		현재 위치 - http://localhost:8080/chap/form/RiverCleanupDay.jsp
+		현재 위치 - http://localhost:8080/chap02/form/RiverCleanupDay.jsp
 		
 		목표 위치 - http://localhost:8080/chap02/river/register
 		
