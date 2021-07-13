@@ -17,5 +17,27 @@
 		<input type="submit" value="이동">
 	</form>
 	
+	<hr>
+	
+	<h3>이동할 페이지를 선택2 (리다이렉트)</h3>
+	
+	<form action="/chap02/page/controller2" method="GET">
+		<input type="radio" name="page" value="1" checked> <label>page1</label>
+		<input type="radio" name="page" value="2"> <label>page2</label>
+		<input type="radio" name="page" value="3"> <label>page3</label>
+		<input type="submit" value="이동">
+	</form>
+	
+	<hr>
+	
+	<h3>이동할 페이지를 선택3 (JSP로 보내기)</h3>
+	
+	<form action="./controller/PageNumController.jsp" method="GET">
+		<input type="radio" name="page" value="1" checked> <label>page1</label>
+		<input type="radio" name="page" value="2"> <label>page2</label>
+		<input type="radio" name="page" value="3"> <label>page3</label>
+		<input type="submit" value="이동">
+	</form>
+	
 </body>
 </html>
