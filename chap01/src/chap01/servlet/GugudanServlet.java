@@ -25,7 +25,9 @@ public class GugudanServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// request, page, out ...
 		
+		// <%
 		PrintWriter out = resp.getWriter();
 		
 		out.print("<style>tr * {padding: 10px}</style>");
