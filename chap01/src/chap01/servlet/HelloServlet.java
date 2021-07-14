@@ -45,7 +45,7 @@ public class HelloServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		// HttpServletRequext : 사용자가 보낸 모든 요청 정보를 담을 수 있는 클래스
+		// HttpServletRequest : 사용자가 보낸 모든 요청 정보를 담을 수 있는 클래스
 		// HttpServletResponse: 받은 요청을 통해 알맞은 응답을 담아놓을 수 있는 클래스
 		
 		/*
