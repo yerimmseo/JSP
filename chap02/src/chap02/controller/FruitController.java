@@ -39,10 +39,10 @@ public class FruitController extends HttpServlet {
 
 		try (
 				// JDK 1.8
-				/* FileInputStream fin = new FileInputStream(f);
-				InputStreamReader iin = new InputStreamReader(fin, "UTF-8");*/
-				FileReader fin = new FileReader(f, Charset.forName("UTF-8"));
-				BufferedReader bin = new BufferedReader(fin);
+				FileInputStream fin = new FileInputStream(f);
+				InputStreamReader iin = new InputStreamReader(fin, "UTF-8");
+				/*FileReader fin = new FileReader(f, Charset.forName("UTF-8"));*/
+				BufferedReader bin = new BufferedReader(iin);
 		) {
 			
 			String line = null;
