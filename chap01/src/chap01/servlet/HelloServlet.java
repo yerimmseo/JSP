@@ -48,6 +48,21 @@ public class HelloServlet extends HttpServlet {
 		// HttpServletRequext : 사용자가 보낸 모든 요청 정보를 담을 수 있는 클래스
 		// HttpServletResponse: 받은 요청을 통해 알맞은 응답을 담아놓을 수 있는 클래스
 		
+		/*
+		 * 응답 스트림에 텍스트를 기록하는 것도 가능하며, 이 작업을 하기 위해서 response.getWriter()를 호출해야 한다.
+		 * 스트림에는 바이너리 기반의 스트림과 텍스트 기반의 스트림이 있다.
+		 * 보통 바이너리 기반의 스트림은 InputStream(입력), OutputStream(출력)이라는 것으로 끝나고,
+		 * 텍스트 기반의 스트림은 Reader(입력), Writer(출력)로 끝난다.
+		 * 
+		 * * 매핑(mapping)이란?
+		 * - url경로가 너무 길고, 보안에 노출되어 있는데, 이러한 경로를 간단하게 표현하는 것.
+		 * 
+		 * * 어노테이션 : @와 함께 쓰는 것을 어노테이션이라 한다.
+		 * - @WebServlet("/매핑명")과 같이 java코드에 직접 입력하여 매핑할 수 있다.
+		 * 
+		 * 톰캣은 어노테이션을 확인하여 '해당 Servlet으로 접근하기 위해서는 URL에 /hello로 접근하면 된다'라는 매핑을 한다.
+		 * */
+		
 		PrintWriter out = resp.getWriter();
 		
 		out.println("<html><head><title>안녕하세요</title></head><body>");
