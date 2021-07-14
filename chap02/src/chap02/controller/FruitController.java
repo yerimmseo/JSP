@@ -63,7 +63,7 @@ public class FruitController extends HttpServlet {
 		req.setAttribute("apple1", new Apple());
 		req.setAttribute("apple2", new Apple());
 		req.setAttribute("apple3", new Apple());
-		req.setAttribute("appleArray", new Apple[]{ new Apple(), new Apple(), new Apple() });
+		req.setAttribute("appleArray", new Apple[] { new Apple(), new Apple(), new Apple() });
 
 		// 포워드된 jsp페이지에서는 주로 화면을 구성한다.
 		req.getRequestDispatcher("/attribute/view/fruitDetail.jsp").forward(req, resp);
