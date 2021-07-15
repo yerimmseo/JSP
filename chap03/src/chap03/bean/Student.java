@@ -41,6 +41,7 @@ public class Student {
 				return compare1 != 0 ? compare1 : o1.name.compareTo(o2.name);
 			}
 		});
+		// getRank()에 return 해주는게 낫다
 		rank = ALL_STUDENTS.indexOf(this) + 1;
 	}
 	
