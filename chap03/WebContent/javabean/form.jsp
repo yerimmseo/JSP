@@ -43,6 +43,18 @@
 		<li><input style="width: 230px;" type="submit" value="등록" form="student-form"></li>
 	</ul>
 	
+	<hr>
+	
+	<form id="student-form2" action="/chap03/javabean/useBeanController.jsp" method="POST"></form>
+	
+	<ul type="none">
+		<li>이름: <input type="text" name="name" form="student-form2"></li>
+		<li>국어: <input type="text" name="kor" form="student-form2"></li>
+		<li>영어: <input type="text" name="eng" form="student-form2"></li>
+		<li>수학: <input type="text" name="math" form="student-form2"></li>
+		<li><input style="width: 230px;" type="submit" value="등록" form="student-form2"></li>
+	</ul>
+	
 	<form id="gradeForm" action="/chap03/student/score" method="GET"></form>
 	
 	<table>
