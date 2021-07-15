@@ -75,7 +75,7 @@
 			location.href = "./removeAttribute.jsp";
 		}
 		
-		const servletSession = () => { location.href = './chap02/fruit/re' };
+		const servletSession = () => { location.href = '/chap02/fruit/re' };
 			
 		btn1.addEventListener('click', (e) => {
 			invalidateSession();
