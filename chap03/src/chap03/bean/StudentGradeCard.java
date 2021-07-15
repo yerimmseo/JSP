@@ -36,6 +36,8 @@ public class StudentGradeCard extends HttpServlet {
 		} else {
 			if (Integer.parseInt(kor) > 100 || Integer.parseInt(eng) > 100 || Integer.parseInt(math) > 100) {
 				resp.sendRedirect("/chap03/javabean/form.jsp");
+			} else if (Integer.parseInt(kor) < 0 || Integer.parseInt(eng) < 0 || Integer.parseInt(math) < 0) {
+				resp.sendRedirect("/chap03/javabean/form.jsp");
 			} else {
 				String stu_id = String.format("A%05d", ++stuId);
 				student.setId(stu_id);
@@ -45,16 +47,17 @@ public class StudentGradeCard extends HttpServlet {
 				student.setMath(Integer.parseInt(math));
 				student.setAvg((student.getKor() + student.getEng() + student.getMath()) / 3.0);
 				students.add(student);
+				
+				students.sort(new StudentRank());
+				for (int i = 0, j = 0; i < students.size(); i++) {
+					students.get(i).setRank(++j);
+				}
+				
+				RequestDispatcher dispatcher = req.getRequestDispatcher("/javabean/gradeCard.jsp");
+				req.setAttribute("students", students);
+				dispatcher.forward(req, resp);
 			}
 		}
-		students.sort(new StudentRank());
-		for (int i = 0, j = 0; i < students.size(); i++) {
-			students.get(i).setRank(++j);
-		}
-		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/javabean/gradeCard.jsp");
-		req.setAttribute("students", students);
-		dispatcher.forward(req, resp);
 	}
 }
 
