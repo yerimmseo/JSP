@@ -33,6 +33,7 @@
 		<li>원래는 DB를 활용해야 하지만 이번엔 활용하지 말고 풀어보세요</li>
 	</ol>
 	
+	<h3># 방법1</h3>
 	<form id="student-form" action="./add" method="POST"></form>
 	
 	<ul type="none">
@@ -45,6 +46,7 @@
 	
 	<hr>
 	
+	<h3># 방법2(jsp에서 컨트롤러처럼 사용하기)</h3>
 	<form id="student-form2" action="/chap03/javabean/useBeanController.jsp" method="POST"></form>
 	
 	<ul type="none">
@@ -54,6 +56,10 @@
 		<li>수학: <input type="text" name="math" form="student-form2"></li>
 		<li><input style="width: 230px;" type="submit" value="등록" form="student-form2"></li>
 	</ul>
+	
+	<hr>
+	
+	<h3># 내가 풀은 방법</h3>
 	
 	<form id="gradeForm" action="/chap03/student/score" method="GET"></form>
 	
