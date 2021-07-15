@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ page import="chap02.hash.MyHashing"%> <%-- JSP Import --%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>Log-in Page</title>
 </head>
 <body>
 
@@ -19,6 +20,14 @@
 		<li>로그인 된 상태로 현재 페이지를 보면 로그인 폼은 사라지고, 로그아웃 버튼이 보여야 한다.</li>
 		<li>로그아웃 기능도 구현해야 한다</li>
 	</ol>
+	
+	<hr>
+	
+	<h3># 자바로 만든 클래스를 .jsp에서 자유롭게 가져다 사용할 수 있다</h3>
+	<%=MyHashing.hash("12345") %>
+	
+	<h3># Dynamic Web Project에 외부 라이브러리를 사용하기 위해서는
+		WEB-INF/lib 폴더에 .jar 등을 넣어줘야 한다.</h3>
 	
 	<hr>
 	
