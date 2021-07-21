@@ -141,4 +141,57 @@ public class WorldcupDAO {
 		}
 	}
 	
+	public ArrayList<WorldcupItem> getAllItemList() {
+		String sql = "SELECT * FROM worldcup_item";
+		
+		try (
+				PreparedStatement pstmt = conn.prepareStatement(sql);
+				ResultSet rs = pstmt.executeQuery();
+		) {
+			ArrayList<WorldcupItem> list = new ArrayList<>();
+			while (rs.next()) {
+				list.add(new WorldcupItem(
+						rs.getInt(1),
+						rs.getString(2),
+						rs.getInt(3),
+						rs.getInt(4),
+						rs.getInt(5),
+						rs.getInt(6)
+				));
+			}
+			return list;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public int winItem(int win_id) {
+		String sql = "UPDATE worldcup_item SET win=win+1 WHERE id=?";
+		
+		try (
+				PreparedStatement pstmt = conn.prepareStatement(sql);
+		) {
+			pstmt.setInt(1, win_id);
+			return pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return 0;
+		}
+	}
+	
+	public int loseItem(int lose_id) {
+		String sql = "UPDATE worldcup_item SET lose=lose+1 WHERE id=?";
+		
+		try (
+				PreparedStatement pstmt = conn.prepareStatement(sql);
+		) {
+			pstmt.setInt(1, lose_id);
+			return pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return 0;
+		}
+	}
+	
 }

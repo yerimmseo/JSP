@@ -24,6 +24,7 @@ public class MainPage extends HttpServlet {
 			WorldcupDAO dao = new WorldcupDAO(conn);
 			req.setAttribute("q_count", dao.getCount());
 			req.setAttribute("q_count2", dao.getNotYetCount());
+			req.setAttribute("items", dao.getAllItemList());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
