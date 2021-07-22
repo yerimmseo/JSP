@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
 
 	<!-- 
 		# 초기화 파라미터 (Init Parameter)
-		- 톰캣을 구동하는 시점에 때 해당 서버 프로그램에서 사용할 변수들을 초기화 하는 것
+		- 톰캣을 구동하는 시점에 해당 서버 프로그램에서 사용할 변수들을 가장 먼저 초기화 하는것
 		- <context-param>에 등록하는 초기화 파라미터는 모든 서블릿에서 사용할 수 있다
-		- 각 <servlet>내부에 등록하는 초기화 파라미터는 해당 서블릿에서만 사용할 수 있다
+		- 각 <servlet>에 등록하는 초기하 파라미터는 해당 서블릿에서만 사용할 수 있다
 	-->
 	<context-param>
 		<param-name>user</param-name>
 		<param-value>java1</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<param-name>encoding</param-name>
 		<param-value>UTF-8</param-value>
 	</context-param>
-	
+
 	<servlet>
 		<servlet-name>servlet_a</servlet-name>
 		<servlet-class>chap08.servlet.ServletA</servlet-class>
@@ -34,5 +37,20 @@
 		<servlet-name>servlet_a</servlet-name>
 		<url-pattern>/servlet_a</url-pattern>
 	</servlet-mapping>
-	
+
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>chap08.servlet.DispatcherServlet</servlet-class>
+	</servlet>
+
+	<!-- 
+		# url - pattern '/'는 web.xml에 걸리지 않은 모든 url에 관한 매핑이다
+		즉 , url-pattern 의 else의 역활이다
+		- 이를 이용해서 하나에서 모든 매핑을 할 수 있다
+	-->
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
 </web-app>
