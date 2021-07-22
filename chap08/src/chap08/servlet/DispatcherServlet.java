@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import chap08.controller.Controller;
-import chap08.controller.MusicControoler;
+import chap08.controller.MusicController;
 
 public class DispatcherServlet extends HttpServlet {
 
@@ -19,7 +19,7 @@ public class DispatcherServlet extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 		
-		controller_mapping.put("/music", new MusicControoler());
+		controller_mapping.put("/music", new MusicController());
 		
 		url_mapping.put("/blog", "/WEB-INF/blog/main.jsp");
 		url_mapping.put("/blog/add", "/WEB-INF/blog/newPost.jsp");

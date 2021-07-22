@@ -3,7 +3,7 @@ package chap08.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class MusicControoler implements Controller {
+public class MusicController implements Controller {
 
 	@Override
 	public void control(HttpServletRequest req, HttpServletResponse resp) {
